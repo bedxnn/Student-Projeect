@@ -1,0 +1,38 @@
+Flashcards (Entity)
+This is the blueprint of a flashcard. It defines the fields (id, filename, description, tags, etc.) that become columns in the database table.
+
+FlashcardsRepository (Repository)
+This is the toolbox for database operations. It comes with built-in methods like:
+
+save() → add/update a flashcard
+
+findAll() → get all flashcards
+
+findById() → get one flashcard
+
+deleteById() → remove a flashcard
+
+With JPA, you don’t need to write SQL — it’s done automatically.
+
+FlashcardsService (Service)
+This is the logic layer. It uses the repository’s tools to perform actions.
+Example: when a user wants to add a flashcard, the service calls repo.save(flashcard).
+
+JPA (Java Persistence API)
+This is the bridge between your Java code and the database. It takes your Flashcards class and maps it to a database table
+
+
+EXPLAINED EASIER
+
+The Entity (Flashcards class) is like the LEGO instructions booklet. It shows what pieces the flashcard has (id, description, tags, etc). But you don’t play with the booklet, it just tells you how to build one.
+
+The Repository is like the big toy box where you can put your LEGO builds in and take them out. It knows how to save them and find them again.
+
+The Service is like you when you play. You decide:
+
+“I want to build a flashcard!” → put it in the toy box.
+
+“I want to see all my flashcards!” → take them out of the box.
+
+“I want to delete one!” → remove it from the box.
+
